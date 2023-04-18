@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b08ff07-e7a1-41d2-8cc2-35b5e6a2ddc7" name="Changes" comment="Lost in the woods initial commit">
+    <list default="true" id="4b08ff07-e7a1-41d2-8cc2-35b5e6a2ddc7" name="Changes" comment="Added getInvetory function and addInvetory function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -61,11 +61,19 @@
       <option name="project" value="LOCAL" />
       <updated>1680435701795</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added getInvetory function and addInvetory function">
+      <created>1681588050437</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681588050438</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lost in the woods initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lost in the woods initial commit" />
+    <MESSAGE value="Added getInvetory function and addInvetory function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added getInvetory function and addInvetory function" />
   </component>
 </project>

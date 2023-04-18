@@ -5,62 +5,83 @@ import java.util.Scanner;
 
 public class Main {
     public static String[] inventory = new String[5];
+    public static String[] starterWeapon = new String[3];
+    public static String[] rooms = new String[3];
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-        //define char
-        String charName = "";
+        //rooms
+        rooms[0] = "Room 1";
+        rooms[1] = "Room 2";
+        rooms[2] = "Room 3";
 
-        //define rooms
-        ArrayList<String>  rooms = new ArrayList<String>();
-        rooms.add("Room 1");
-        rooms.add("Room 2");
-        rooms.add("Room 3");
-        //test - System.out.println(rooms);
+        //Starter weapons
+        starterWeapon[0] = "Rusty Sword";
+        starterWeapon[1] = "Wooden Staff";
+        starterWeapon[2] = "Bronze Bow";
 
 
+        welcomeScreen();
+        System.out.println("Choose your starter weapon");
+        System.out.println("\nType 1 for melee, 2 for mage & 3 for ranged");
+        String starterWepChoice = scanner.nextLine();
 
-        //welcomeScreen();
+        //puts weapon in inventory depending on choice
+        boolean keepAsking = true;
+        while (keepAsking){
+            if (starterWepChoice.equals("1")){
+                System.out.println("You chose a " + starterWeapon[0]);
+                addInventory(starterWeapon[0]);
+                getInventory();
+                keepAsking = false;
+            }
+
+
+        }
+
         addInventory("Sword");
-        getInventory();
 
-        
+
+
+
     }
 
-    public static void welcomeScreen(){
+    public static void welcomeScreen() {
 
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("What is your name? ");
         String charName = scanner.nextLine();
-        System.out.println("So your name is, " + charName + ".\n");
-        System.out.println(charName + "You are lost in a dark forest and need to find your way out before nightfall. " +
+        System.out.println("So your name is, " + charName + "...\n");
+        System.out.println(charName + ", you are lost in a dark forest and need to find your way out before nightfall. " +
                 "You must navigate through the forest, overcome obstacles, and make strategic decisions to reach safety.");
 
 
     }
 
-    public static String[] getInventory(){
-        for (int i = 0; i<inventory.length; i++){
-            if (inventory[i] == null || inventory[i].equals("")){
-                inventory[i] = "Empty";
+    public static String[] getInventory() {
+        for (int i = 0; i < inventory.length; i++) {
+            if (inventory[i] == null || inventory[i].equals("")) {
+                inventory[i] = i + 1 + ". Empty";
             }
         }
-        System.out.println(Arrays.toString(inventory));;
+        System.out.println(Arrays.toString(inventory));
+        ;
         return inventory;
     }
 
-    public static void addInventory(String item){
+    public static void addInventory(String item) {
 
-        for (int i = 0; i< inventory.length; i++){
-            if (inventory[i] == null){
-                inventory[i] = item;
+        for (int i = 0; i < inventory.length; i++) {
+            if (inventory[i] == null) {
+                inventory[i] = i + 1 + ". " + item;
                 break;
 
 
             }
 
         }
-        System.out.println(Arrays.toString(inventory));
+
     }
 }
