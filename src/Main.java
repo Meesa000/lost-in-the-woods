@@ -21,20 +21,36 @@ public class Main {
 
 
         // main game code starts here
-        welcomeScreen();
-        System.out.println("Choose your starter weapon");
-        System.out.println("\nType 1 for melee, 2 for mage & 3 for ranged");
-        String starterWepChoice = scanner.nextLine();
+        charCreator();
 
-        //puts weapon in inventory depending on choice
+        //puts starter weapon in inventory depending on choice
         while (true) {
+            System.out.println("Choose your starter weapon");
+            System.out.println("\nType 1 for melee, 2 for mage & 3 for ranged");
+            String starterWepChoice = scanner.nextLine();
+
             if (starterWepChoice.equals("1")) {
                 System.out.println("You chose a " + starterWeapon[0]);
                 addInventory(starterWeapon[0]);
                 getInventory();
                 break;
             }
-            else if (starterWepChoice.)
+            else if (starterWepChoice.equals("2")){
+                System.out.println("You chose a " + starterWeapon[1]);
+                addInventory(starterWeapon[1]);
+                getInventory();
+                break;
+            }
+            else if (starterWepChoice.equals("3")){
+                System.out.println("You chose a " + starterWeapon[2]);
+                addInventory(starterWeapon[2]);
+                getInventory();
+                break;
+            }
+            else {
+                System.out.println("That is not a valid option.");
+
+            }
 
 
         }
@@ -44,7 +60,7 @@ public class Main {
 
     }
 
-    public static void welcomeScreen() {
+    public static void charCreator() {
 
         Scanner scanner = new Scanner(System.in);
 
